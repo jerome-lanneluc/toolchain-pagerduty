@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "PagerDuty",
+    "description": "blablabla",
+    "longDescription": "blablabla blablabla blablabla.",
+    "type": "object",
+    "properties": {
+        "key_type": {
+            "type": "string",
+             "enum": ["api", "service"]
+        },
+        "api_key": {
+            "type": "string"
+        },
+        "service_key": {
+            "type": "string"
+        },
+        "service_name": {
+            "type": "string"
+        },
+        "user_email": {
+            "type": "string"
+        },
+        "user_phone": {
+            "type": "string"
+        }
+    },
+    "required": ["key_type"],
+    "form": [
+        {
+            "type": "selectfieldset",
+            "key": "key_type",
+            "titleMap": {
+                "api": "Account",
+                "service": "Service"
+            },
+            "items": [
+                {
+                    "type": "section",
+                    "items": [
+                        "api_key",
+                        "service_name",
+                        "user_email",
+                        "user_phone"
+                    ]
+                }, {
+                    "type": "section",
+                    "items": [
+                        "service_key"
+                    ]
+                }
+            ]
+        }
+    ]
+}
