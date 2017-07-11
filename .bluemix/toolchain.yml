@@ -22,4 +22,8 @@ services:
   alerting:
     service_id: pagerduty
     $ref: pagerduty.yml
-    
+form:
+  pagerduty:
+    parameters:
+    schema:
+      $ref: pagerduty.json
