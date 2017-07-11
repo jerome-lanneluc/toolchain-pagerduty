@@ -21,3 +21,7 @@ toolchain:
 services:
   sample-alert:
     service_id: pagerduty
+    parameters:
+      api_key:
+      service_name:
+    
