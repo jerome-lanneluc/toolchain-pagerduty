@@ -19,9 +19,7 @@ toolchain:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
 services:
-  sample-alert:
+  alerting:
     service_id: pagerduty
-    parameters:
-      api_key:
-      service_name:
+    $ref: pagerduty.yml
     
