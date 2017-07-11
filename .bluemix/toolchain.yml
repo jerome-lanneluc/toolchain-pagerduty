@@ -1,0 +1,23 @@
+version: '2'
+messages:
+  $i18n: locales.yml
+template:
+  name:
+    $ref: "#/messages/template.name"
+  description:
+    $ref: "#/messages/template.description"
+  header: '![](toolchain.svg?localize)'
+  icon: icon.svg
+  info:
+    git url: >-
+      [https://github.com/jerome-lanneluc/toolchain-pagerduty](https://github.com/jerome-lanneluc/toolchain-pagerduty)
+    git branch: >-
+      [master](https://github.com/jerome-lanneluc/toolchain-pagerduty/tree/master)
+toolchain:
+  name: 'toolchain-pagerduty-{{timestamp}}'
+  template:
+    getting_started:
+      $ref: "#/messages/template.gettingStarted"
+services:
+  sample-alert:
+    service_id: pagerduty
