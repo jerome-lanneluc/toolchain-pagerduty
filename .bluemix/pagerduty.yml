@@ -1,6 +1,6 @@
 ---
 parameters:
-  api_key: ""
+  api_key: "test"
   service_name: ""
   user_email: ""
   user_phone: ""
